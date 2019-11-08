@@ -1,8 +1,14 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+const corsMiddleware = cors();
+const bodyParser = require("body-parser");
+const bodyParserMiddleware = bodyParser.json();
 const Image = require("./image/model");
 const imageRouter = require("./image/router");
 
+app.use(corsMiddleware);
+app.use(bodyParserMiddleware);
 app.use(imageRouter);
 
 app.get("/", (request, response) => {
