@@ -6,10 +6,12 @@ const bodyParser = require("body-parser");
 const bodyParserMiddleware = bodyParser.json();
 const Image = require("./image/model");
 const imageRouter = require("./image/router");
+const userRouter = require("./auth/router");
 
 app.use(corsMiddleware);
 app.use(bodyParserMiddleware);
 app.use(imageRouter);
+app.use(userRouter);
 
 app.get("/", (request, response) => {
   response.send("Hello Security!");
