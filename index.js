@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const Image = require("./image/model");
+const imageRouter = require("./image/router");
+
+app.use(imageRouter);
 
 app.get("/", (request, response) => {
   response.send("Hello Security!");
