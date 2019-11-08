@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const db = require("./db");
+const Image = require("./image/model");
 
 app.get("/", (request, response) => {
   response.send("Hello Security!");
