@@ -21,6 +21,6 @@ router.post("/image", (request, response, next) => {
     .catch(next);
 });
 
-console.log("Connected to router.js");
+console.log("Connected to Image-router.js");
 
 module.exports = router;

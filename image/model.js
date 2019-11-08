@@ -16,6 +16,6 @@ const Image = db.define(
   { tableName: "imageboard" }
 );
 
-console.log("Connected to model.js");
+console.log("Connected to Image-model.js");
 
 module.exports = Image;

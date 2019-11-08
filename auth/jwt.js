@@ -11,4 +11,6 @@ function toData(token) {
   return jwt.verify(token, secret);
 }
 
+console.log("Connected to jwt.js");
+
 module.exports = { toJWT, toData };
